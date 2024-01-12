@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ipynb_convert/__init__.py
+src/ipynb_convert/convert.py
+src/ipynb_convert.egg-info/PKG-INFO
+src/ipynb_convert.egg-info/SOURCES.txt
+src/ipynb_convert.egg-info/dependency_links.txt
+src/ipynb_convert.egg-info/top_level.txt
+tests/test_convert.py
+tests/tester.py

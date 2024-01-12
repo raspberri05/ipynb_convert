@@ -1,7 +1,5 @@
 import json
-
-def add(num):
-  return num + 1
+import os
 
 def convert_to_python(filename):
   count = 1
@@ -9,14 +7,22 @@ def convert_to_python(filename):
   with open(filename, mode="r", encoding="utf-8") as f:
     file = json.loads(f.read())
 
-  new = open(filename.split('.')[0] + ".py", "x")
+  python_filename = filename.split('.')[0] + ".py"
+
+  if os.path.exists(python_filename):
+    os.remove(python_filename)
+
+  new = open(python_filename, "x")
     
-  for i in file["cells"]:
-    # print("# cell " + str(count) + "\n")
+  for i in file["cells"]: 
     new.write("# cell " + str(count) + "\n\n")
     count += 1
-    for j in i["source"]:
-      # print(j)
-      new.write(j)
-    # print("\n")
+    cell_type = i["cell_type"]
+    
+    for j in i["source"]: 
+      if cell_type == "code":
+        new.write(j)
+      if cell_type == "markdown":
+        new.write("# " + j)
+
     new.write("\n\n")
