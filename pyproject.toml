@@ -1,0 +1,22 @@
+[project]
+name = "ipynb_convert"
+version = "0.0.1"
+authors = [
+  { name="Vedant Singhania", email="vedant.singhania@gmail.com.com" },
+]
+description = "A package that can convert a Jupyter Notebook into a single Python file"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/raspberri05/ipynb_convert"
+Issues = "https://github.com/raspberri05/ipynb_convert/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
