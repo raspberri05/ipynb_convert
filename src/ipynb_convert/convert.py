@@ -26,3 +26,16 @@ def convert_to_python(filename):
         new.write("# " + j)
 
     new.write("\n\n")
+
+def convert_to_ipynb(filename):
+  with open(filename, mode="r", encoding="utf-8") as f:
+    file = f.read()
+
+  ipynb_filename = filename.split('.')[0] + ".ipynb"
+
+  if os.path.exists(ipynb_filename):
+    os.remove(ipynb_filename)
+  
+  new = open(ipynb_filename, "x")
+
+  new.write('{}')
