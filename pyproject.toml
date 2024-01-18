@@ -1,6 +1,6 @@
 [project]
 name = "ipynb_convert"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
   { name="Vedant Singhania", email="vedant.singhania@gmail.com.com" },
 ]
