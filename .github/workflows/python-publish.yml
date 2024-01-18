@@ -19,6 +19,9 @@ jobs:
   deploy:
 
     runs-on: ubuntu-latest
+    environment:
+      name: pypi-deploy
+      url: https://pypi.org/project/ipynb-convert/
 
     steps:
     - uses: actions/checkout@v3
